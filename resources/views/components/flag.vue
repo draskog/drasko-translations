@@ -127,7 +127,7 @@ const mapLanguageToCountry = {
     sat: "IN",
     zu: "ZA",
     rs: "RS",
-    me: "RS",
+    me: "ME",
 }
 
 const normalizedCode = computed(() => {
