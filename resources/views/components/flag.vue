@@ -97,7 +97,6 @@ const mapLanguageToCountry = {
     ru: "RU",
     sm: "WS",
     sr: "RS",
-    rs: "RS",
     st: "LS",
     sn: "ZW",
     sd: "PK",
@@ -127,7 +126,8 @@ const mapLanguageToCountry = {
     sa: "IN",
     sat: "IN",
     zu: "ZA",
-    me: "ME",
+    rs: "sr-RS",
+    me: "sr-RS",
 }
 
 const normalizedCode = computed(() => {
