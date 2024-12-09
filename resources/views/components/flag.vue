@@ -126,8 +126,8 @@ const mapLanguageToCountry = {
     sa: "IN",
     sat: "IN",
     zu: "ZA",
-    rs: "sr-RS",
-    me: "sr-RS",
+    rs: "RS",
+    me: "RS",
 }
 
 const normalizedCode = computed(() => {
@@ -152,7 +152,7 @@ onMounted(() => {
         folder: "svg",
         ext: ".svg",
         className: props.width,
-        base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/",
+        base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
     })
 })
 </script>
