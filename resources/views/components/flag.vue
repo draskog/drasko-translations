@@ -97,6 +97,7 @@ const mapLanguageToCountry = {
     ru: "RU",
     sm: "WS",
     sr: "RS",
+    rs: "RS",
     st: "LS",
     sn: "ZW",
     sd: "PK",
@@ -126,6 +127,7 @@ const mapLanguageToCountry = {
     sa: "IN",
     sat: "IN",
     zu: "ZA",
+    me: "ME",
 }
 
 const normalizedCode = computed(() => {
@@ -146,7 +148,12 @@ const countryFlag = computed(() => {
 const emojiAlt = ref("")
 
 onMounted(() => {
-    emojiAlt.value = twemoji.parse(countryFlag.value, { folder: "svg", ext: ".svg", className: props.width, base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/" })
+    emojiAlt.value = twemoji.parse(countryFlag.value, {
+        folder: "svg",
+        ext: ".svg",
+        className: props.width,
+        base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/",
+    })
 })
 </script>
 
