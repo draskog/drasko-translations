@@ -36,4 +36,9 @@ class Contributor extends Authenticatable
     {
         return $this->role === RoleEnum::translator;
     }
+
+    public function isAdministrator(): bool
+    {
+        return true;
+    }
 }
