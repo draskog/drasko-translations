@@ -5,11 +5,8 @@ import { Popover, PopoverButton, PopoverOverlay, PopoverPanel, TransitionChild, 
 const user = useAuth()
 
 const navigation = [
-    {
-        name: "Translations",
-        href: route("ltu.translation.index"),
-        current: route().current("ltu.translation*") || route().current("ltu.source_translation*") || route().current("ltu.phrases*"),
-    },
+    { name: "Dashboard", href: route("home"), current: route().current("home") },
+    { name: "Translations", href: route("ltu.translation.index"), current: route().current("ltu.translation*") || route().current("ltu.source_translation*") || route().current("ltu.phrases*") },
 ]
 </script>
 
