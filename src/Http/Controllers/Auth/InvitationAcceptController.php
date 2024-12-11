@@ -53,7 +53,7 @@ class InvitationAcceptController extends BaseController
 
         $invite->delete();
 
-        auth('translations')->login($user);
+        auth('web')->login($user);
 
         return redirect()->route('ltu.translation.index');
     }

@@ -38,13 +38,13 @@ class HandleInertiaRequests extends Middleware
 
     protected function auth(): array
     {
-        if (! Auth::guard('translations')->check()) {
+        if (! Auth::guard('web')->check()) {
             return [
                 'user' => null,
             ];
         }
 
-        $user = Auth::guard('translations')->user();
+        $user = Auth::guard('web')->user();
 
         if (! $user instanceof Contributor) {
             return [];

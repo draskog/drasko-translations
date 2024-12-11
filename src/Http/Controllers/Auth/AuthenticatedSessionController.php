@@ -13,7 +13,7 @@ class AuthenticatedSessionController extends Controller
 {
     public function create()
     {
-        if (Auth::guard('translations')->check()) {
+        if (Auth::guard('web')->check()) {
             return redirect()->route('ltu.translation.index');
         }
 
@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('translations')->logout();
+        Auth::guard('web')->logout();
 
         $request->session()->invalidate();
 

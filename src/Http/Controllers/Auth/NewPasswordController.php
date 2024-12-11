@@ -52,7 +52,7 @@ class NewPasswordController extends Controller
 
             $user->save();
 
-            Auth::guard('translations')->login($user);
+            Auth::guard('web')->login($user);
         } catch (Throwable $e) {
             return redirect()->route('ltu.password.request')->with('invalidResetToken', 'Invalid token');
         }

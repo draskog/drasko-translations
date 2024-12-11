@@ -21,11 +21,11 @@ class Authenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($this->auth->guard('translations')->check()) {
-            $this->auth->shouldUse('translations');
+        if ($this->auth->guard('web')->check()) {
+            $this->auth->shouldUse('web');
         } else {
             throw new AuthenticationException(
-                'Unauthenticated.', ['translations'], route('ltu.login')
+                'Unauthenticated.', ['web'], route('ltu.login')
             );
         }
 
